@@ -6,6 +6,7 @@ import java.lang.ref.SoftReference;
 /**
  * @Author wenbaoxie
  * @Date 2020/9/15
+ * @TODO 强软弱虚测试
  */
 public class TestReference {
 

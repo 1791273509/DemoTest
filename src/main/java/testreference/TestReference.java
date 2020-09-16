@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.lang.ref.SoftReference;
+import java.lang.ref.WeakReference;
 
 /**
  * @Author wenbaoxie
@@ -21,7 +22,7 @@ public class TestReference {
         只要某个对象有强引用与之关联，这个对象永远不会被回收，即使内存不足，JVM宁愿抛出OOM，也不会去回收。
         那么什么时候才可以被回收呢？当强引用和对象之间的关联被中断了，就可以被回收了。
         我们可以手动把关联给中断了，方法也特别简单：
-        */
+*/
         object = null;
         Student_Fin fin = new Student_Fin();
         fin = null;
@@ -29,13 +30,23 @@ public class TestReference {
         Thread.sleep(1000);
         log.info("GC完成............");
 
+
+//        vmoption ： -Xmx20m
         SoftReference<byte[]> softReference = new SoftReference<byte[]>(new byte[1024 * 1024 * 10]);
         System.out.println(softReference.get());
         System.out.println(softReference.get());
 //        10mb
         byte[] tem = new byte[1024 * 1024 * 10];
         System.out.println(softReference.get());
+
+
+//        弱引用的特点是不管内存是否足够，只要发生GC，都会被回收： ThreadLocal就是用的这个引用
+        WeakReference<byte[]> weakReference = new WeakReference<byte[]>(new byte[1024*1024*10]);
+        System.out.println(weakReference.get());
+
+
 //        阻塞住
         System.in.read();
+
     }
 }

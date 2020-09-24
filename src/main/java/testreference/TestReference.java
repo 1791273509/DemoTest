@@ -47,6 +47,5 @@ public class TestReference {
 
 //        阻塞住
         System.in.read();
-
     }
 }

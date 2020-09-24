@@ -1,23 +1,25 @@
 package redis;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.data.redis.connection.ReactiveRedisConnectionFactory;
-import org.springframework.data.redis.core.ReactiveHashOperations;
-import org.springframework.data.redis.core.ReactiveStringRedisTemplate;
-import reactor.core.publisher.Mono;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * @Author wenbaoxie
  * @Date 2020/9/24
  */
 
-@SpringBootApplication
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class RedisDemoApplication {
+    @Autowired
+    private RedisTemplate<String,String> redisTemplate;
 
+    @Test
+    public void get(){
+        System.out.println(redisTemplate.opsForValue().get("111"));
+    }
 }

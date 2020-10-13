@@ -17,8 +17,6 @@ public class GetPath {
         // 第一种：获取类加载的根路径   D:\code\DemoTest\target\test-classes
         File f = new File(this.getClass().getResource("/").getPath());
         System.out.println(f);
-
-
         // 获取当前类的所在工程路径; 如果不加“/”  获取当前类的加载目录  D:\code\DemoTest\target\test-classes\path
         File f2 = new File(this.getClass().getResource("").getPath());
         System.out.println(f2);

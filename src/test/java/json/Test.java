@@ -18,10 +18,10 @@ public class Test {
         ObjectMapper objectMapper = new ObjectMapper();
         Entity[] o = objectMapper.readValue(new File("D:\\code\\activity\\activity\\src\\main\\resources\\permissionItem\\permissionItemUriMapping-seller.json"), Entity[].class);
 
-        for (int i = 0; i < o.length; i++) {
-            o[i].setId(ids());
+        for (Entity entity : o) {
+            entity.setId(ids());
         }
-        objectMapper.writeValue(new File("D:\\code\\activity\\activity\\src\\main\\resources\\permissionItem\\permissionItemUriMapping-seller1.json"),o);
+        objectMapper.writeValue(new File("D:\\code\\activity\\activity\\src\\main\\resources\\permissionItem\\permissionItemUriMapping-seller1.json"), o);
     }
 
     @org.junit.Test
@@ -29,21 +29,34 @@ public class Test {
         ObjectMapper objectMapper = new ObjectMapper();
         ItemEntity[] o = objectMapper.readValue(new File("D:\\code\\activity\\activity\\src\\main\\resources\\permissionItem\\permissionItemUriMapping-seller.json"), ItemEntity[].class);
 
-        for (int i = 0; i < o.length; i++) {
-            o[i].setId(ids());
+        for (ItemEntity itemEntity : o) {
+            itemEntity.setId(ids());
         }
-        objectMapper.writeValue(new File("D:\\code\\activity\\activity\\src\\main\\resources\\permissionItem\\permissionItemUriMapping-seller1.json"),o);
+        objectMapper.writeValue(new File("D:\\code\\activity\\activity\\src\\main\\resources\\permissionItem\\permissionItemUriMapping-seller1.json"), o);
     }
+
     public Long ids() throws IOException {
         Long workerId = generateRandom();
         SnowflakeIdGenerator idGenerator = new SnowflakeIdGenerator();
         ReflectionTestUtils.setField(idGenerator, "workerId", workerId);
         ReflectionTestUtils.setField(idGenerator, "landscapeId", 0);
 
-         return idGenerator.nextId(SnowflakeIdStrategy.of(
+        return idGenerator.nextId(SnowflakeIdStrategy.of(
 
 
-         ));
+        ));
+    }
+
+    public Long idss() throws IOException {
+        Long workerId = generateRandom();
+        SnowflakeIdGenerator idGenerator = new SnowflakeIdGenerator();
+        ReflectionTestUtils.setField(idGenerator, "workerId", workerId);
+        ReflectionTestUtils.setField(idGenerator, "landscapeId", 0);
+
+        return idGenerator.nextId(SnowflakeIdStrategy.of(
+
+
+        ));
     }
 
     private long generateRandom() {

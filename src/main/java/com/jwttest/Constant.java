@@ -1,4 +1,4 @@
-package jwttest;
+package com.jwttest;
 
 /**
  * @Author wenbaoxie

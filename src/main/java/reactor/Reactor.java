@@ -76,10 +76,14 @@ public class Reactor {
     public void testinter() {
         Mono<Long> delay = Mono.delay(Duration.ofSeconds(1));
         delay.block();
-        delay.doOnNext(System.out::print).subscribe();
+        delay.doOnNext(System.out::print).retry().subscribe();
+    }
+    @Test
+    public void testRetry() {
+
     }
 
-    @Test
+        @Test
     public void midoperate() {
         Flux<Integer> objectFlux = Flux.create((sink) -> {
                     for (int i = 0; i < 5; i++) {

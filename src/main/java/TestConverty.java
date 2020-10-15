@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Set;
-import javafx.util.Pair;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.http.HttpHeaders;
@@ -26,23 +25,10 @@ public class TestConverty {
         String[] split = "1=2&2=4".split("=|&");
         System.out.println(Arrays.toString(split));
     }
-    @Test
-    public void retrytest(){
-        Mono.just("dd").doOnNext(x-> {
-            System.out.println(x);
-            throw new RuntimeException();
-        }).retry(3).subscribe();
-    }
-    @Test
-    public void testPair(){
-        Pair<String,Integer> pa = new Pair<>("111",1);
-        System.out.println(pa.getKey());
-        System.out.println(pa.getValue());
-    }
 
     @Test
     public void test() {
-        System.out.println("d892");
+        System.out.println("d2");
         Mono<String> x = WebClient.builder().defaultHeaders(h -> addHeader(h)).build().get()
                 .uri("http://127.0.0.1:8089/")
                 .retrieve().bodyToMono(String.class);

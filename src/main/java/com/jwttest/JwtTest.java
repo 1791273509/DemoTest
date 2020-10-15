@@ -1,4 +1,4 @@
-package jwttest;
+package com.jwttest;
 
 import io.jsonwebtoken.*;
 import org.junit.Test;

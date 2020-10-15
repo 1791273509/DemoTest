@@ -3,9 +3,9 @@ logging:
 server:
   port: 8888
 spring:
-  redis:
-    host: 127.0.0.1
-    port: 6379
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
   datasource:
     name: root
     password: root

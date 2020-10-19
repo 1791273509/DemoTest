@@ -42,4 +42,5 @@ public class TestProtoBuf {
             System.out.print(gd.toString());
             System.out.println("===== 使用gps 反序列化生成对象结束 =====");
         }
+        public void 
 }

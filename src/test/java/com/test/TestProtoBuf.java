@@ -1,5 +1,6 @@
 package com.test;
 
+import com.google.protobuf.GeneratedMessageV3;
 import com.google.protobuf.InvalidProtocolBufferException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -33,11 +34,10 @@ public class Test implements CommandLineRunner {
     WebClient client;
     private static String blog = "http://localhost:8089";
     private static String weibo = blog;
+
+
     @Override public void run(String... args) throws Exception {
-         test();
-        System.out.println("ddddd");
-        System.out.println("mult");
-        tests();
+        System.out.println("+++++++++++");
     }
     public void test() {
         single(blog);

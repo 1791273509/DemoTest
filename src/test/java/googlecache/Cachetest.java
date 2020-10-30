@@ -57,7 +57,6 @@ public class Cachetest {
                         return student;
                     }
                 });
-
       for (int i = 0; i < 20; i++) {
           // 从缓存中得到数据，由于我们没有设置过缓存，所以需要通过CacheLoader加载缓存数据
           Student student = studentCache.get(i);

@@ -6,11 +6,93 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mybatis-plus-sample-optimistic-locker" />
+        <module name="mybatis-plus-sample-dynamic-tablename" />
+        <module name="mybatis-plus-sample-quickstart" />
+        <module name="mybatis-plus-sample-generator" />
+        <module name="mybatis-plus-sample-sql-injector" />
+        <module name="mybatis-plus-sample-tenant" />
+        <module name="mybatis-plus-sample-resultmap" />
+        <module name="mybatis-plus-sample-reduce-springmvc" />
+        <module name="mybatis-plus-sample-auto-fill-metainfo" />
+        <module name="mybatis-plus-sample-pagehelper" />
+        <module name="mybatis-plus-sample-id-generator" />
+        <module name="mybatis-plus-sample-crud" />
+        <module name="mybatis-plus-sample-assembly" />
+        <module name="mybatis-plus-sample-enum" />
         <module name="DemoTest" />
+        <module name="mybatis-plus-sample-deluxe" />
+        <module name="mybatis-plus-sample-wrapper" />
+        <module name="mybatis-plus-sample-no-spring" />
+        <module name="mybatis-plus-sample-execution-analysis" />
+        <module name="mybatis-plus-sample-sequence" />
+        <module name="Mybatis-Plus-Demo" />
+        <module name="mybatis-plus-sample-pagination" />
+        <module name="mybatis-plus-sample-typehandler" />
+        <module name="mybatis-plus-sample-logic-delete" />
+        <module name="mybatis-plus-sample-active-record" />
+        <module name="mybatis-plus-sample-quickstart-springmvc" />
+        <module name="mybatis-plus-sample-performance-analysis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="DemoTest" target="8" />
+      <module name="Mybatis-Plus-Demo" target="8" />
+      <module name="mybatis-plus-sample-active-record" target="1.8" />
+      <module name="mybatis-plus-sample-assembly" target="1.8" />
+      <module name="mybatis-plus-sample-auto-fill-metainfo" target="1.8" />
+      <module name="mybatis-plus-sample-crud" target="1.8" />
+      <module name="mybatis-plus-sample-deluxe" target="1.8" />
+      <module name="mybatis-plus-sample-dynamic-tablename" target="1.8" />
+      <module name="mybatis-plus-sample-enum" target="1.8" />
+      <module name="mybatis-plus-sample-execution-analysis" target="1.8" />
+      <module name="mybatis-plus-sample-generator" target="1.8" />
+      <module name="mybatis-plus-sample-id-generator" target="1.8" />
+      <module name="mybatis-plus-sample-logic-delete" target="1.8" />
+      <module name="mybatis-plus-sample-no-spring" target="1.8" />
+      <module name="mybatis-plus-sample-optimistic-locker" target="1.8" />
+      <module name="mybatis-plus-sample-pagehelper" target="1.8" />
+      <module name="mybatis-plus-sample-pagination" target="1.8" />
+      <module name="mybatis-plus-sample-performance-analysis" target="1.8" />
+      <module name="mybatis-plus-sample-quickstart" target="1.8" />
+      <module name="mybatis-plus-sample-quickstart-springmvc" target="1.8" />
+      <module name="mybatis-plus-sample-reduce-springmvc" target="1.8" />
+      <module name="mybatis-plus-sample-resultmap" target="1.8" />
+      <module name="mybatis-plus-sample-sequence" target="1.8" />
+      <module name="mybatis-plus-sample-sql-injector" target="1.8" />
+      <module name="mybatis-plus-sample-tenant" target="1.8" />
+      <module name="mybatis-plus-sample-typehandler" target="1.8" />
+      <module name="mybatis-plus-sample-wrapper" target="1.8" />
+      <module name="mybatis-plus-samples" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mybatis-plus-sample-active-record" options="-parameters" />
+      <module name="mybatis-plus-sample-assembly" options="-parameters" />
+      <module name="mybatis-plus-sample-auto-fill-metainfo" options="-parameters" />
+      <module name="mybatis-plus-sample-crud" options="-parameters" />
+      <module name="mybatis-plus-sample-deluxe" options="-parameters" />
+      <module name="mybatis-plus-sample-dynamic-tablename" options="-parameters" />
+      <module name="mybatis-plus-sample-enum" options="-parameters" />
+      <module name="mybatis-plus-sample-execution-analysis" options="-parameters" />
+      <module name="mybatis-plus-sample-generator" options="-parameters" />
+      <module name="mybatis-plus-sample-id-generator" options="-parameters" />
+      <module name="mybatis-plus-sample-logic-delete" options="-parameters" />
+      <module name="mybatis-plus-sample-no-spring" options="-parameters" />
+      <module name="mybatis-plus-sample-optimistic-locker" options="-parameters" />
+      <module name="mybatis-plus-sample-pagehelper" options="-parameters" />
+      <module name="mybatis-plus-sample-pagination" options="-parameters" />
+      <module name="mybatis-plus-sample-performance-analysis" options="-parameters" />
+      <module name="mybatis-plus-sample-quickstart" options="-parameters" />
+      <module name="mybatis-plus-sample-quickstart-springmvc" options="-parameters" />
+      <module name="mybatis-plus-sample-reduce-springmvc" options="-parameters" />
+      <module name="mybatis-plus-sample-resultmap" options="-parameters" />
+      <module name="mybatis-plus-sample-sequence" options="-parameters" />
+      <module name="mybatis-plus-sample-sql-injector" options="-parameters" />
+      <module name="mybatis-plus-sample-tenant" options="-parameters" />
+      <module name="mybatis-plus-sample-typehandler" options="-parameters" />
+      <module name="mybatis-plus-sample-wrapper" options="-parameters" />
+    </option>
   </component>
 </project>

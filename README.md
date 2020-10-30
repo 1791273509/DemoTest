@@ -65,3 +65,5 @@ Execturos.newCachedThreadPool()
 
 使用支持任务调度的调度器，通过 Schedulers.timer()方法来创建。
 从已有的 ExecutorService 对象中创建调度器，通过 Schedulers.fromExecutorService()方法来创建。
+
+## 自定义注解
